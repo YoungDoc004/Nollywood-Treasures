@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOLLY-TV ACADEMY registration and guidelines">
+    <title>NOLLY-TV ACADEMY</title>
+    <link rel="icon" href="img/img3.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #f5f5dc; /* Savannah Beige */;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #007bff 0%, #ffa07a 100%);
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .instructions h2 {
+            color: #4a90e2;
+            font-size: 28px;
+        }
+        .instructions p {
+            font-size: larger;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        .instructions ol {
+            padding-left: 20px;
+            font-size: 18px;
+            text-align: left;
+        }
+        .instructions li {
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: none;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-field {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .form-field input, .form-field select, .form-field textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            background-color: #4a90e2;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #357ab8;
+            transform: translateY(-2px);
+        }
+
+        .congrats {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #d4edda;
+            color: #155724;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .congrats h1 {
+            font-size: 50px;
+            font-weight: bolder;
+            margin: 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: popIn 1s ease-in-out;
+        }
+        .congrats p {
+            font-size: 35px;
+            margin-top: 10px;
+            color: #0b6623;
+            font-weight: 900;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Mobile Landscape */
+        @media only screen and (max-width: 768px) {
+            header {
+               font-size: 24px;
+            }
+
+           .instructions {
+                margin: 10px auto;
+                padding: 15px;
+                width: 95%;
+            }
+
+            .instructions h1 {
+                font-size: 18px;
+            }
+
+            .instructions h2 {
+                font-size: 18px;
+            }
+
+            .instructions p {
+                font-size: 14px;
+            }
+
+            .instructions ol {
+                padding-left: 20px;
+                font-size: 16px;
+            }
+
+            .instructions li {
+                margin-bottom: 10px;
+            }
+
+            form {
+               padding: 15px;
+            }
+
+            .form-field {
+                margin-bottom: 10px;
+            }
+
+            .form-field label {
+                font-size: 16px;
+            }
+
+            .form-field input, .form-field select, .form-field textarea {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            button {
+               padding: 10px 20px;
+               font-size: 16px;
+            }
+        }
+
+       /* Mobile Portrait */
+       @media only screen and (max-width: 480px) {
+            header {
+               font-size: 18px;
+            }
+
+            .instructions {
+                margin: 5px auto;
+                padding: 10px;
+            }
+
+            .instructions h1 {
+                font-size: 18px;
+            }
+
+            .instructions h2 {
+                font-size: 16px;
+            }
+
+            .instructions p {
+                font-size: 14px;
+            } 
+
+            .instructions ol {
+                padding-left: 10px;
+                font-size: 14px;
+            }
+
+           .instructions li {
+               margin-bottom: 5px;
+            }
+
+           form {
+              padding: 10px;
+            }
+
+           .form-field {
+               margin-bottom: 5px;
+            }
+
+           .form-field label {
+               font-size: 14px;
+            }
+
+           .form-field input, .form-field select, .form-field textarea {
+               padding: 5px;
+               font-size: 12px;
+            }
+
+            button {
+               padding: 8px 15px;
+               font-size: 14px;
+            } 
+        }
+
+        footer {
+            background-color: #6c5ce7;
+            padding: 10px;
+            color: #ffffff;
+            font-size: 14px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <header>NOLLY-TV ACADEMY APPLICATION FORM</header>
+
+    <main>
+        <section class="instructions">
+            <h1>INSTRUCTION</h1>
+            <h2><u>PLEASE READ THESE INSTRUCTIONS CAREFULLY</u></h2>
+            <p>You Are About To Apply For An Acting Role In The Nolly-TV Agency, The Application Process Includes Two Phases. <br> <br> The First Phase Involves Filling Your Information In The Form Below And Paying The One Time Application Fee Of Three Thousand Naira (#3000). <br><br> After Successful submission, You will Be Contacted Via Your Email For An Interview And  Auditioning. <br> <br> GOODLUCK!</p>
+            <ol>
+                <li>Click the "Fill Form" button to access the registration form.</li>
+                <li>Fill out the form completely and accurately.</li>
+                <li>Click the "PAY" button to complete your payment and submit your application.</li>
+                <li>Contact support if you encounter any issues.</li>
+            </ol>
+            <button id="showFormBtn" onclick="showForm()">Fill Form</button>
+        </section>
+
+        <form id="registrationForm">
+            <div class="form-field">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-field">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="maidenName">Mother's Maiden Name:</label>
+                <input type="text" id="maidenName" name="maidenName" required>
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-field">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-field">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-field">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-field">
+                <label for="lga">LGA:</label>
+                <input type="text" id="lga" name="lga" required>
+            </div>
+            <div class="form-field">
+                <label for="canAct">Can You Act?</label>
+                <select id="canAct" name="canAct" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="whyActing">Why Did You Choose Acting And What Sets You Apart From Other Applicants?</label>
+                <textarea id="whyActing" name="whyActing" rows="4" required></textarea>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="payWithPaystack()">PAY</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>&copy; 2025 NOLLY-TV ACADEMY. All rights reserved.</footer>
+
+    <script>
+        function showForm() {
+            document.getElementById('registrationForm').style.display = 'block';
+            document.getElementById('showFormBtn').style.display = 'none';
+        }
+
+        function payWithPaystack() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            if (!firstName || !lastName || !email || !phone) {
+                alert("Please fill in all required fields before proceeding to payment.");
+                return;
+            }
+
+            var handler = PaystackPop.setup({
+                key: "pk_live_2ce1fb990f3cb6081c104fec757c798ce727069a", 
+                email: email,
+                amount: 3000 * 100,
+                metadata: {
+                    custom_fields: [
+                        { display_name: "First Name", variable_name: "first_name", value: firstName },
+                        { display_name: "Last Name", variable_name: "last_name", value: lastName },
+                        { display_name: "Mobile Number", variable_name: "mobile_number", value: phone }
+                    ]
+                },
+                callback: function(response) {
+                    fetch('paystack-webhook.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            reference: response.reference,
+                            firstName: firstName,
+                            lastName: lastName,
+                            email: email
+                        })
+                    });
+
+                    document.body.innerHTML = '<div class="congrats"><h1>CONGRATULATIONS!, ' + firstName + '!</h1><p>Your Application Has Been Submitted Successfully!</p></div>';
+                },
+                onClose: function() {
+                    alert('Transaction cancelled');
+                }
+            });
+            handler.openIframe();
+        }
+    </script>
+</body>
+</html>
