@@ -14,3 +14,12 @@ function showSlides() {
 document.addEventListener('DOMContentLoaded', () => {
     showSlides();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('introModal');
+  document.getElementById('enterBtn').onclick = () => {
+    modal.style.display = 'none';
+  };
+  // Optional: auto-hide after 5 seconds
+  // setTimeout(() => modal.style.display = 'none', 5000);
+});

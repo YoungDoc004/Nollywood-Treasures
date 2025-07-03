@@ -236,6 +236,23 @@ main {
     background-color: #cc0000;
 }
 
+.modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85); display: flex;
+  align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  text-align: center; color: #fff;
+  padding: 2rem; border-radius: 8px;
+  background: url('img/e78f2f5e3b354b19b2e661f82de56dd9_473598589_18318654865166309_492385318306862566_n.jpg') center/cover no-repeat;
+}
+#enterBtn {
+  margin-top: 1rem; padding: 0.8rem 2rem;
+  font-size: 1rem; background: gold; border: none;
+  border-radius: 4px; cursor: pointer;
+}
+
 /*---- Tablets & Mobiles ----*/
 @media (max-width: 768px) {
   header {
